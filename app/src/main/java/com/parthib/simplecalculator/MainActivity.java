@@ -38,16 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else {
-                    n1 = Double.parseDouble(no1.getText().toString());
-                    n2 = Double.parseDouble(no2.getText().toString());
+                    n1=Double.parseDouble(no1.getText().toString());
+                    n2=Double.parseDouble(no2.getText().toString());
 
 
-                    n3 = n1 + n2;
+                    n3=n1+n2;
 
-                    if (n3 / (int)Math.round(n3) != 1.0)
-                        n3 = (int)Math.round(n3);
-
-                    no3.setText(String.valueOf(n3));
+                    if (!(n3-Math.floor(n3)>0.0))
+                        no3.setText(String.valueOf((int)n3));
+                    else
+                        no3.setText(String.valueOf(n3));
                 }
             }
         });
@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     n2 = Double.parseDouble(no2.getText().toString());
                     n3 = n1 - n2;
 
-                    if (n3 % Math.floor(n3) == 0)
-                        n3 = (int) n3;
-
-                    no3.setText(String.valueOf(n3));
+                    if (!(n3-Math.floor(n3)>0.0))
+                        no3.setText(String.valueOf((int)n3));
+                    else
+                        no3.setText(String.valueOf(n3));
                 }
             }
         });
@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     n2 = Double.parseDouble(no2.getText().toString());
                     n3 = n1 * n2;
 
-                    if (n3 % Math.floor(n3) == 0)
-                        n3 = (int) n3;
-
-                    no3.setText(String.valueOf(n3));
+                    if (!(n3-Math.floor(n3)>0.0))
+                        no3.setText(String.valueOf((int)n3));
+                    else
+                        no3.setText(String.valueOf(n3));
                 }
             }
         });
@@ -107,12 +107,10 @@ public class MainActivity extends AppCompatActivity {
                     n2 = Double.parseDouble(no2.getText().toString());
                     n3 = n1 / n2;
 
-                    if (n3 % Math.floor(n3) == 0)
-                        n3 = (int) n3;
-
-                    System.out.println(n3);
-
-                    no3.setText(String.valueOf(n3));
+                    if (!(n3-Math.floor(n3)>0.0))
+                        no3.setText(String.valueOf((int)n3));
+                    else
+                        no3.setText(String.valueOf(n3));
                 }
             }
         });
